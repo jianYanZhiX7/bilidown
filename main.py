@@ -6,6 +6,9 @@ import shutil
 import logging
 from datetime import datetime
 
+from geturl import getInformation, getMutipleInformation
+from download import getAudio, getVideo
+
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
@@ -16,8 +19,7 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-from geturl import getInformation, getMutipleInformation
-from download import getAudio, getVideo
+
 
 # 不使用 list flag 时，也可以修改代码传入 BVList 列表来下载相互独立的几个视频
 # BVList=[
@@ -103,7 +105,6 @@ def handle_all(args):
     st = time.time()
 
     try:
-        # 创建临时目录
         if not os.path.exists('temp'):
             logger.info('创建临时目录: temp')
             os.makedirs('temp')

@@ -104,3 +104,128 @@
 2025-05-19 23:10:29,508 - download - INFO - 音频下载完成: Tank - 倔强的树（音源）, 耗时: 0.69秒
 2025-05-19 23:10:30,510 - __main__ - INFO - 音频下载完成! 耗时: 58.8秒
 2025-05-19 23:10:30,511 - __main__ - INFO - 程序正常退出
+2025-05-19 23:23:56,134 - __main__ - INFO - ==================================================
+2025-05-19 23:23:56,174 - __main__ - INFO - 程序启动
+2025-05-19 23:23:56,191 - __main__ - INFO - B站音视频下载器启动
+2025-05-19 23:23:56,202 - __main__ - INFO - 解析命令行参数完成，执行功能: handle_audio
+2025-05-19 23:23:56,203 - __main__ - INFO - 开始音频下载任务
+2025-05-19 23:23:56,203 - __main__ - INFO - 参数: bvid=BV1Jg411R7dB, save=demo, list=True
+2025-05-19 23:23:56,204 - __main__ - INFO - 正在下载视频列表音频...
+2025-05-19 23:23:56,204 - geturl - INFO - 开始获取多P视频信息: bvid=BV1Jg411R7dB
+2025-05-19 23:23:56,294 - geturl - INFO - 共发现31个分P视频
+2025-05-19 23:23:56,295 - geturl - INFO - 成功获取所有分P信息，共31条记录
+2025-05-19 23:23:56,296 - download - INFO - 开始下载音频，共31个视频
+2025-05-19 23:23:56,296 - download - INFO - 开始处理第1个音频: Tank - 三国恋 (bvid=BV1Jg411R7dB)
+2025-05-19 23:23:56,482 - download - INFO - 开始下载音频到: demo\Tank - 三国恋.mp3
+2025-05-19 23:23:56,852 - download - INFO - 音频下载完成: Tank - 三国恋, 耗时: 0.54秒
+2025-05-19 23:23:57,854 - download - INFO - 开始处理第2个音频: Tank Selina - 独唱情歌 (bvid=BV1Jg411R7dB)
+2025-05-19 23:23:58,072 - download - INFO - 开始下载音频到: demo\Tank Selina - 独唱情歌.mp3
+2025-05-19 23:23:58,337 - download - ERROR - 音频下载失败: Tank Selina - 独唱情歌, 错误: 403 Client Error: Forbidden for url: https://upos-sz-estgcos.bilivideo.com/upgcxcode/04/92/733559204/733559204-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=9e734df4f7504780b1f56140f0551ddu&mid=0&tag=&gen=playurlv3&og=cos&uipk=5&platform=pc&oi=1875372492&os=upos&nbs=1&deadline=1747675440&upsig=d643b60141c7e67c957ee7be7f3759a5&uparams=e,trid,mid,tag,gen,og,uipk,platform,oi,os,nbs,deadline&bvc=vod&nettype=0&bw=67370&build=0&dl=0&f=u_0_0&agrr=0&buvid=&orderid=0,3
+2025-05-19 23:23:58,337 - __main__ - ERROR - 音频下载失败: 403 Client Error: Forbidden for url: https://upos-sz-estgcos.bilivideo.com/upgcxcode/04/92/733559204/733559204-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=9e734df4f7504780b1f56140f0551ddu&mid=0&tag=&gen=playurlv3&og=cos&uipk=5&platform=pc&oi=1875372492&os=upos&nbs=1&deadline=1747675440&upsig=d643b60141c7e67c957ee7be7f3759a5&uparams=e,trid,mid,tag,gen,og,uipk,platform,oi,os,nbs,deadline&bvc=vod&nettype=0&bw=67370&build=0&dl=0&f=u_0_0&agrr=0&buvid=&orderid=0,3
+2025-05-19 23:23:58,338 - __main__ - ERROR - 程序运行出错: 403 Client Error: Forbidden for url: https://upos-sz-estgcos.bilivideo.com/upgcxcode/04/92/733559204/733559204-1-30216.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&trid=9e734df4f7504780b1f56140f0551ddu&mid=0&tag=&gen=playurlv3&og=cos&uipk=5&platform=pc&oi=1875372492&os=upos&nbs=1&deadline=1747675440&upsig=d643b60141c7e67c957ee7be7f3759a5&uparams=e,trid,mid,tag,gen,og,uipk,platform,oi,os,nbs,deadline&bvc=vod&nettype=0&bw=67370&build=0&dl=0&f=u_0_0&agrr=0&buvid=&orderid=0,3
+2025-05-19 23:27:53,606 - __main__ - INFO - ==================================================
+2025-05-19 23:27:53,606 - __main__ - INFO - 程序启动
+2025-05-19 23:27:53,607 - __main__ - INFO - B站音视频下载器启动
+2025-05-19 23:27:53,614 - __main__ - INFO - 解析命令行参数完成，执行功能: handle_audio
+2025-05-19 23:27:53,615 - __main__ - INFO - 开始音频下载任务
+2025-05-19 23:27:53,615 - __main__ - INFO - 参数: bvid=BV1Jg411R7dB, save=demo, list=True
+2025-05-19 23:27:53,615 - __main__ - INFO - 正在下载视频列表音频...
+2025-05-19 23:27:53,616 - geturl - INFO - 开始获取多P视频信息: bvid=BV1Jg411R7dB
+2025-05-19 23:27:53,761 - geturl - INFO - 共发现31个分P视频
+2025-05-19 23:27:53,762 - geturl - INFO - 成功获取所有分P信息，共31条记录
+2025-05-19 23:27:53,763 - download - INFO - 开始下载音频，共31个视频
+2025-05-19 23:27:53,763 - download - INFO - 开始处理第1个音频: Tank - 三国恋 (bvid=BV1Jg411R7dB)
+2025-05-19 23:27:53,985 - download - INFO - 开始下载音频到: demo\Tank - 三国恋.mp3
+2025-05-19 23:27:54,256 - download - INFO - 音频下载完成: Tank - 三国恋, 耗时: 0.49秒
+2025-05-19 23:27:55,257 - download - INFO - 开始处理第2个音频: Tank Selina - 独唱情歌 (bvid=BV1Jg411R7dB)
+2025-05-19 23:27:55,411 - download - INFO - 开始下载音频到: demo\Tank Selina - 独唱情歌.mp3
+2025-05-19 23:27:55,820 - download - INFO - 音频下载完成: Tank Selina - 独唱情歌, 耗时: 0.56秒
+2025-05-19 23:27:56,822 - download - INFO - 开始处理第3个音频: Tank - 千年泪 (bvid=BV1Jg411R7dB)
+2025-05-19 23:27:56,991 - download - INFO - 开始下载音频到: demo\Tank - 千年泪.mp3
+2025-05-19 23:27:57,199 - download - INFO - 音频下载完成: Tank - 千年泪, 耗时: 0.38秒
+2025-05-19 23:27:58,200 - download - INFO - 开始处理第4个音频: Tank - 非你莫属 (bvid=BV1Jg411R7dB)
+2025-05-19 23:27:58,431 - download - INFO - 开始下载音频到: demo\Tank - 非你莫属.mp3
+2025-05-19 23:27:58,867 - download - INFO - 音频下载完成: Tank - 非你莫属, 耗时: 0.67秒
+2025-05-19 23:27:59,869 - download - INFO - 开始处理第5个音频: Tank - 专属天使 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:00,052 - download - INFO - 开始下载音频到: demo\Tank - 专属天使.mp3
+2025-05-19 23:28:00,485 - download - INFO - 音频下载完成: Tank - 专属天使, 耗时: 0.62秒
+2025-05-19 23:28:01,486 - download - INFO - 开始处理第6个音频: Tank - 如果我变成回忆 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:01,736 - download - INFO - 开始下载音频到: demo\Tank - 如果我变成回忆.mp3
+2025-05-19 23:28:02,405 - download - INFO - 音频下载完成: Tank - 如果我变成回忆, 耗时: 0.92秒
+2025-05-19 23:28:03,406 - download - INFO - 开始处理第7个音频: Tank - 给我你的爱 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:03,967 - download - INFO - 开始下载音频到: demo\Tank - 给我你的爱.mp3
+2025-05-19 23:28:04,580 - download - INFO - 音频下载完成: Tank - 给我你的爱, 耗时: 1.17秒
+2025-05-19 23:28:05,581 - download - INFO - 开始处理第8个音频: tank - 会长大的幸福 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:05,757 - download - INFO - 开始下载音频到: demo\tank - 会长大的幸福.mp3
+2025-05-19 23:28:06,352 - download - INFO - 音频下载完成: tank - 会长大的幸福, 耗时: 0.77秒
+2025-05-19 23:28:07,353 - download - INFO - 开始处理第9个音频: Tank - 全世界都停电 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:07,565 - download - INFO - 开始下载音频到: demo\Tank - 全世界都停电.mp3
+2025-05-19 23:28:07,809 - download - INFO - 音频下载完成: Tank - 全世界都停电, 耗时: 0.46秒
+2025-05-19 23:28:08,810 - download - INFO - 开始处理第10个音频: Tank - 我们小时候 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:08,992 - download - INFO - 开始下载音频到: demo\Tank - 我们小时候.mp3
+2025-05-19 23:28:09,491 - download - INFO - 音频下载完成: Tank - 我们小时候, 耗时: 0.68秒
+2025-05-19 23:28:10,492 - download - INFO - 开始处理第11个音频: Tank - 斗牛要不要 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:11,140 - download - INFO - 开始下载音频到: demo\Tank - 斗牛要不要.mp3
+2025-05-19 23:28:11,646 - download - INFO - 音频下载完成: Tank - 斗牛要不要, 耗时: 1.15秒
+2025-05-19 23:28:12,647 - download - INFO - 开始处理第12个音频: Tank - 终极一班 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:12,873 - download - INFO - 开始下载音频到: demo\Tank - 终极一班.mp3
+2025-05-19 23:28:13,213 - download - INFO - 音频下载完成: Tank - 终极一班, 耗时: 0.57秒
+2025-05-19 23:28:14,214 - download - INFO - 开始处理第13个音频: Tank - 街头霸王 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:14,803 - download - INFO - 开始下载音频到: demo\Tank - 街头霸王.mp3
+2025-05-19 23:28:15,367 - download - INFO - 音频下载完成: Tank - 街头霸王, 耗时: 1.15秒
+2025-05-19 23:28:16,368 - download - INFO - 开始处理第14个音频: Tank - 阳光美眉 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:16,544 - download - INFO - 开始下载音频到: demo\Tank - 阳光美眉.mp3
+2025-05-19 23:28:16,836 - download - INFO - 音频下载完成: Tank - 阳光美眉, 耗时: 0.47秒
+2025-05-19 23:28:17,837 - download - INFO - 开始处理第15个音频: Tank - 延长比赛 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:17,982 - download - INFO - 开始下载音频到: demo\Tank - 延长比赛.mp3
+2025-05-19 23:28:18,612 - download - INFO - 音频下载完成: Tank - 延长比赛, 耗时: 0.78秒
+2025-05-19 23:28:19,614 - download - INFO - 开始处理第16个音频: Tank - 岚 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:20,579 - download - INFO - 开始下载音频到: demo\Tank - 岚.mp3
+2025-05-19 23:28:20,796 - download - INFO - 音频下载完成: Tank - 岚, 耗时: 1.18秒
+2025-05-19 23:28:21,798 - download - INFO - 开始处理第17个音频: Tank - 最后的微笑 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:21,991 - download - INFO - 开始下载音频到: demo\Tank - 最后的微笑.mp3
+2025-05-19 23:28:22,375 - download - INFO - 音频下载完成: Tank - 最后的微笑, 耗时: 0.58秒
+2025-05-19 23:28:23,377 - download - INFO - 开始处理第18个音频: Tank - 城里的月光 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:23,544 - download - INFO - 开始下载音频到: demo\Tank - 城里的月光.mp3
+2025-05-19 23:28:23,772 - download - INFO - 音频下载完成: Tank - 城里的月光, 耗时: 0.39秒
+2025-05-19 23:28:24,773 - download - INFO - 开始处理第19个音频: Tank Ella - 懂我再爱我 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:24,988 - download - INFO - 开始下载音频到: demo\Tank Ella - 懂我再爱我.mp3
+2025-05-19 23:28:25,668 - download - INFO - 音频下载完成: Tank Ella - 懂我再爱我, 耗时: 0.9秒
+2025-05-19 23:28:26,670 - download - INFO - 开始处理第20个音频: Tank - 我在呢 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:26,887 - download - INFO - 开始下载音频到: demo\Tank - 我在呢.mp3
+2025-05-19 23:28:27,500 - download - INFO - 音频下载完成: Tank - 我在呢, 耗时: 0.83秒
+2025-05-19 23:28:28,501 - download - INFO - 开始处理第21个音频: Tank - 你的情歌 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:28,679 - download - INFO - 开始下载音频到: demo\Tank - 你的情歌.mp3
+2025-05-19 23:28:28,896 - download - INFO - 音频下载完成: Tank - 你的情歌, 耗时: 0.4秒
+2025-05-19 23:28:29,899 - download - INFO - 开始处理第22个音频: Tank - 写给明天的情书 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:30,052 - download - INFO - 开始下载音频到: demo\Tank - 写给明天的情书.mp3
+2025-05-19 23:28:30,578 - download - INFO - 音频下载完成: Tank - 写给明天的情书, 耗时: 0.68秒
+2025-05-19 23:28:31,580 - download - INFO - 开始处理第23个音频: Tank - 你的降生 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:31,755 - download - INFO - 开始下载音频到: demo\Tank - 你的降生.mp3
+2025-05-19 23:28:32,322 - download - INFO - 音频下载完成: Tank - 你的降生, 耗时: 0.74秒
+2025-05-19 23:28:33,323 - download - INFO - 开始处理第24个音频: Tank - 你的出现完整了我的世界 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:33,539 - download - INFO - 开始下载音频到: demo\Tank - 你的出现完整了我的世界.mp3
+2025-05-19 23:28:33,846 - download - INFO - 音频下载完成: Tank - 你的出现完整了我的世界, 耗时: 0.52秒
+2025-05-19 23:28:34,848 - download - INFO - 开始处理第25个音频: Tank - 告诉你 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:35,032 - download - INFO - 开始下载音频到: demo\Tank - 告诉你.mp3
+2025-05-19 23:28:35,427 - download - INFO - 音频下载完成: Tank - 告诉你, 耗时: 0.58秒
+2025-05-19 23:28:36,428 - download - INFO - 开始处理第26个音频: Tank - 我明白 (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:36,607 - download - INFO - 开始下载音频到: demo\Tank - 我明白.mp3
+2025-05-19 23:28:37,020 - download - INFO - 音频下载完成: Tank - 我明白, 耗时: 0.59秒
+2025-05-19 23:28:38,026 - download - INFO - 开始处理第27个音频: Tank - 晴天雨（音源） (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:38,654 - download - INFO - 开始下载音频到: demo\Tank - 晴天雨（音源）.mp3
+2025-05-19 23:28:38,962 - download - INFO - 音频下载完成: Tank - 晴天雨（音源）, 耗时: 0.93秒
+2025-05-19 23:28:39,965 - download - INFO - 开始处理第28个音频: Tank - 懂了（音源） (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:40,255 - download - INFO - 开始下载音频到: demo\Tank - 懂了（音源）.mp3
+2025-05-19 23:28:40,644 - download - INFO - 音频下载完成: Tank - 懂了（音源）, 耗时: 0.68秒
+2025-05-19 23:28:41,645 - download - INFO - 开始处理第29个音频: Tank - 为红颜（音源） (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:41,859 - download - INFO - 开始下载音频到: demo\Tank - 为红颜（音源）.mp3
+2025-05-19 23:28:42,308 - download - INFO - 音频下载完成: Tank - 为红颜（音源）, 耗时: 0.66秒
+2025-05-19 23:28:43,309 - download - INFO - 开始处理第30个音频: Tank - 冯京与马凉（音源） (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:43,475 - download - INFO - 开始下载音频到: demo\Tank - 冯京与马凉（音源）.mp3
+2025-05-19 23:28:44,021 - download - INFO - 音频下载完成: Tank - 冯京与马凉（音源）, 耗时: 0.71秒
+2025-05-19 23:28:45,023 - download - INFO - 开始处理第31个音频: Tank - 倔强的树（音源） (bvid=BV1Jg411R7dB)
+2025-05-19 23:28:45,279 - download - INFO - 开始下载音频到: demo\Tank - 倔强的树（音源）.mp3
+2025-05-19 23:28:45,760 - download - INFO - 音频下载完成: Tank - 倔强的树（音源）, 耗时: 0.74秒
+2025-05-19 23:28:46,767 - __main__ - INFO - 音频下载完成! 耗时: 53.15秒
+2025-05-19 23:28:46,787 - __main__ - INFO - 程序正常退出

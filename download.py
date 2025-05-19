@@ -1,9 +1,59 @@
 import os
 import time
+import random
 import requests
 import logging
+from fake_useragent import UserAgent
 
 logger = logging.getLogger(__name__)
+ua = UserAgent()
+
+# 请求间隔配置
+MIN_DELAY = 1.0
+MAX_DELAY = 3.0
+
+# 代理配置 (使用时取消注释并填写代理地址)
+# PROXIES = {
+#     'http': 'http://your_proxy_address:port',
+#     'https': 'http://your_proxy_address:port'
+# }
+
+# Cookie配置 (使用时取消注释并填写真实Cookie)
+COOKIE = None  # 默认None，使用时设置为真实Cookie字符串
+
+def random_delay():
+    """生成随机延迟"""
+    delay = random.uniform(MIN_DELAY, MAX_DELAY)
+    logger.debug(f'随机延迟: {delay:.2f}秒')
+    time.sleep(delay)
+
+def make_request(url: str, headers: dict, max_retries: int = 3) -> requests.Response:
+    """带重试机制的请求函数
+    Args:
+        url: 请求URL
+        headers: 请求头
+        max_retries: 最大重试次数
+        
+    Returns:
+        requests.Response: 响应对象
+        
+    Raises:
+        Exception: 当所有重试都失败时抛出异常
+    """
+    last_exception = None
+    for attempt in range(max_retries):
+        try:
+            # 可在此处添加代理 PROXIES=PROXIES
+            response = requests.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+            return response
+        except Exception as e:
+            logger.warning(f'请求失败 (尝试 {attempt+1}/{max_retries}): {str(e)}')
+            last_exception = e
+            if attempt < max_retries - 1:
+                random_delay()
+    
+    raise last_exception if last_exception else Exception('未知错误')
 
 def getAudio(infoList, dirname):
     """下载B站视频的音频文件
@@ -31,26 +81,29 @@ def getAudio(infoList, dirname):
         try:
             # 获取音频URL
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0',
+                'User-Agent': ua.random,
                 'Referer': 'https://www.bilibili.com',
                 'Origin': 'https://www.bilibili.com'
             }
             logger.debug('请求音频URL...')
-            response = requests.get(url, headers=headers)
-            response.raise_for_status()
+            response = make_request(url, headers)
             audioUrl = response.json()['data']['dash']['audio'][0]['baseUrl']
             logger.debug(f'获取到音频URL: {audioUrl}')
 
             # 下载音频
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0',
+                'User-Agent': ua.random,
                 'Accept': '*/*',
-                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
                 'Accept-Encoding': 'gzip, deflate, br',
                 'Range': 'bytes=0-',
-                'Referer': 'https://api.bilibili.com/x/web-interface/view?bvid='+bvid,
+                'Referer': 'https://www.bilibili.com/video/' + bvid,
                 'Origin': 'https://www.bilibili.com',
-                'Connection': 'keep-alive'
+                'Connection': 'keep-alive',
+                'Cookie': COOKIE if 'COOKIE' in globals() else '',
+                'Sec-Fetch-Dest': 'video',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site'
             }
             
             save_path = os.path.join(dirname, title+'.mp3')
@@ -100,26 +153,29 @@ def getVideo(infoList, dirname):
         try:
             # 获取视频URL
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0',
+                'User-Agent': ua.random,
                 'Referer': 'https://www.bilibili.com',
                 'Origin': 'https://www.bilibili.com'
             }
             logger.debug('请求视频URL...')
-            response = requests.get(url, headers=headers)
-            response.raise_for_status()
+            response = make_request(url, headers)
             videoUrl = response.json()['data']['dash']['video'][0]['baseUrl']
             logger.debug(f'获取到视频URL: {videoUrl}')
 
             # 下载视频
             headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:56.0) Gecko/20100101 Firefox/56.0',
+                'User-Agent': ua.random,
                 'Accept': '*/*',
-                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
                 'Accept-Encoding': 'gzip, deflate, br',
                 'Range': 'bytes=0-',
-                'Referer': 'https://api.bilibili.com/x/web-interface/view?bvid='+bvid,
+                'Referer': 'https://www.bilibili.com/video/' + bvid,
                 'Origin': 'https://www.bilibili.com',
-                'Connection': 'keep-alive'
+                'Connection': 'keep-alive',
+                'Cookie': COOKIE if COOKIE else '',
+                'Sec-Fetch-Dest': 'video',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site'
             }
             
             save_path = os.path.join(dirname, title+'.mp4')
