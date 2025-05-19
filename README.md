@@ -10,6 +10,10 @@
 输入视频BV号，批量下载B站视频中的资源，通过在终端中输入不同的参数选择 `仅下载音频 | 仅下载视频 | 下载音频和视频并合成为视频`
 
 
+https://www.bilibili.com/video/BV1Jg411R7dB/
+
+> bv号（bvid）就是末尾的 BV1Jg411R7dB
+
 ```shell
 # 下载 BV 号为 BV1Jg411R7dB 视频列表的全部音频，放入 demo 文件夹中
 $ python main.py audio --bvid BV1Jg411R7dB --save demo --list
