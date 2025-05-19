@@ -9,6 +9,21 @@
 
 输入视频BV号，批量下载B站视频中的资源，通过在终端中输入不同的参数选择 `仅下载音频 | 仅下载视频 | 下载音频和视频并合成为视频`
 
+
+```shell
+# 下载 BV 号为 BV1Jg411R7dB 视频列表的全部音频，放入 demo 文件夹中
+$ python main.py audio --bvid BV1Jg411R7dB --save demo --list
+```
+
+
+```shell
+# 下载 BV 号为 BV1eq4y1K7QS 的视频和音频，合成后放入 demo 文件夹中
+$ python main.py all --bvid BV1eq4y1K7QS --save demo
+```
+
+
+
+
 ## 2. Python版本与依赖库
 
 Python 3.8
@@ -45,16 +60,3 @@ optional arguments:
 
 3. 若使用 `all` flag 运行，则需先下载依赖 [ffmpeg](https://www.ffmpeg.org/download.html) 并将其加入环境变量
 
-## 4. Demo
-
-```shell
-# 下载 BV 号为 BV1eq4y1K7QS 的视频和音频，合成后放入 demo 文件夹中
-$ python main.py all --bvid BV1eq4y1K7QS --save demo
-```
-
-
-
-```shell
-# 下载 BV 号为 BV1Zs411X7ik 视频列表的全部音频，放入 demo 文件夹中
-$ python main.py audio --bvid BV1Zs411X7ik --save demo --list
-```

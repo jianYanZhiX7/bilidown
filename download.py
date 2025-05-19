@@ -92,19 +92,31 @@ def getAudio(infoList, dirname):
 
             # 下载音频
             headers = {
-                'User-Agent': ua.random,
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0',
                 'Accept': '*/*',
-                'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+                'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
                 'Accept-Encoding': 'gzip, deflate, br',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache',
                 'Range': 'bytes=0-',
-                'Referer': 'https://www.bilibili.com/video/' + bvid,
+                'Referer': f'https://www.bilibili.com/video/{bvid}',
                 'Origin': 'https://www.bilibili.com',
                 'Connection': 'keep-alive',
-                'Cookie': COOKIE if 'COOKIE' in globals() else '',
+                'Cookie': COOKIE if COOKIE else f'buvid3={random.randint(100000,999999)}; buvid_fp={random.randint(100000,999999)}; CURRENT_FNVAL=4048; sid={random.randint(100000,999999)}; fingerprint={random.randint(100000,999999)}',
                 'Sec-Fetch-Dest': 'video',
                 'Sec-Fetch-Mode': 'cors',
-                'Sec-Fetch-Site': 'same-site'
+                'Sec-Fetch-Site': 'same-site',
+                'Sec-Fetch-User': '?1',
+                'Upgrade-Insecure-Requests': '1',
+                'X-Requested-With': 'com.bilibili.app',
+                'DNT': '1',
+                'TE': 'trailers',
+                'X-Forwarded-For': f'{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}'
             }
+            # 增加更严格的请求间隔
+            delay = random.uniform(3.0, 8.0)
+            logger.debug(f'严格随机延迟: {delay:.2f}秒')
+            time.sleep(delay)
             
             save_path = os.path.join(dirname, title+'.mp3')
             logger.info(f'开始下载音频到: {save_path}')
