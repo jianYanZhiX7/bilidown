@@ -10,6 +10,7 @@ from geturl import getInformation, getMutipleInformation
 from download import getAudio, getVideo
 
 # 配置日志
+os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
