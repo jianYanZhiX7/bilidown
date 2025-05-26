@@ -62,5 +62,17 @@ optional arguments:
   --list       Download a list of videos
 ```
 
+例如
+
+https://www.bilibili.com/video/BV1Jg411R7dB/
+
+> bv号（bvid）就是末尾的 BV1Jg411R7dB
+
+```shell
+# 下载 BV 号为 BV1Jg411R7dB 视频列表的全部音频，放入 demo 文件夹中
+$ python main.py audio --bvid BV1Jg411R7dB --save demo --list
+```
+
+
 3. 若使用 `all` flag 运行，则需先下载依赖 [ffmpeg](https://www.ffmpeg.org/download.html) 并将其加入环境变量
 
